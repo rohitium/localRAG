@@ -1,0 +1,488 @@
+2
+Fokker-Planck Equations
+2.1 Liouville Equation in Classical Mechanics
+The foundations of nonequilibrium statistical mechanics are based
+on the Liouville equation. Many of the common methods for handling
+practical problems in nonequilibrium statistical mechanics, methods
+that will be described in the next few sections, either avoid the Liouville
+equation entirely or replace it by approximations. This is generally
+a reasonable thing to do; simple and approximate methods have an
+enormous value in science. Ultimately, however, the approximate
+methods must be connected with more exact and rigorous ones. This
+section presents a derivation of the Liouville equation in classical
+mechanics and shows how symbolic operator solutions of the Liouville
+equation can be used to deal with the properties of time correlation
+functions. The Liouville equation is associated with Hamiltonian
+dynamics; the corresponding equation associated with Langevin
+dynamics, called the Fokker-Planck equation, is discussed in the next
+section.
+In classical mechanics, a system is fully specified by its coordinates
+and conjugate momenta.There are usually many of these; for notational
+convenience, the set of all coordinates will be denoted by the single
+symbol q, and the conjugate momenta by the single symbol p. The pair
+(p, q) gives the location of the system in its phase space, or the "phase
+point." Further, when there is no need to be more specific, this point is
+denoted for greater brevity by X. The dynamical behavior of the system
+30
+Zwanzig, Robert. Nonequilibrium Statistical Mechanics, Oxford University Press, Incorporated, 2001.
+ProQuest Ebook Central, http://ebookcentral.proquest.com/lib/utxa/detail.action?docID=281466.
+Created from utxa on 2019-01-16 11:29:31.
+Copyright © 2001. Oxford University Press, Incorporated. All rights reserved.
+FOKKER-PLANCK EQUATIONS 31
+is determined by its Hamiltonian H(p, q) or H(X). For now, this is taken
+to be independent of time.
+The motion of the system in phase space is governed by Hamilton's
+equations,
+In principle, this set of first-order differential equations determines
+the path or trajectory X, in phase space that passes through a given
+phase point X at time t = 0. The state of the system at any time fully
+determines its state at all other times, both future and past. The
+one-dimensional harmonic oscillator provides an easy illustration. The
+Hamiltonian is
+the equations of motion are
+and their solution, valid for all t, is
+Aside from this special case, one can seldom solve Hamilton's equations
+exactly. Further, one learns from research on chaotic dynamical
+systems that solutions may be extremely sensitive to small changes in
+the initial state, so that "exact in principle" does not always mean "exact
+in practice." It may be very hard to give a precise prediction of the
+future behavior of a given initial state. However, because the present
+concern is with formalism, and not with practical calculations, this
+difficulty may be ignored.
+The Liouville Equation
+In classical statistical mechanics, averages are determined by the
+phase space distribution function (or phase space density) f(p, q, t)
+or f(X, t). The probability of finding the system state in the region
+dX around the point X at time t is f(X, t)dX. Probability is conserved;
+the total probability that the system is somewhere is unity at
+all times,
+Zwanzig, Robert. Nonequilibrium Statistical Mechanics, Oxford University Press, Incorporated, 2001.
+ProQuest Ebook Central, http://ebookcentral.proquest.com/lib/utxa/detail.action?docID=281466.
+Created from utxa on 2019-01-16 11:29:31.
+Copyright © 2001. Oxford University Press, Incorporated. All rights reserved.
+32 NONEQUILIBRIUM STATISTICAL MECHANICS
+As in fluid mechanics or electrodynamics, whenever an integral of a
+quantity p(X) over an entire domain is conserved, there is generally a
+conservation law of the form
+where p is a density, V is a velocity, and pV is a flux. In the present
+instance, the time rate of change of the density / is the negative of the
+divergence of its flux in phase space, and the correspondences are
+and
+On using Hamilton's equations for the time derivatives of p and q and
+canceling out cross terms, this becomes the Liouville equation for the
+probability distribution function,
+It is often convenient to write this in an operator form. The
+Liouville operator is defined by
+so that the Liouville equation is
+The Liouville equation has the formal operator solution
+The Liouville operator is sometimes (especially in older literature)
+written with the imaginary factor i = , so that f/ t = —iLf.
+There seems to be no special advantage in carrying along the extra
+factor of i.
+One property of the Liouville operator merits special comment
+because it is so frequently used. Consider the integral of LAf over
+Zwanzig, Robert. Nonequilibrium Statistical Mechanics, Oxford University Press, Incorporated, 2001.
+ProQuest Ebook Central, http://ebookcentral.proquest.com/lib/utxa/detail.action?docID=281466.
+Created from utxa on 2019-01-16 11:29:31.
+Copyright © 2001. Oxford University Press, Incorporated. All rights reserved.
+FOKKER-PLANCK EQUATIONS 33
+the entire phase space. A multidimensional version of the basic
+integral,
+can be used to convert an integral over the phase space volume to an
+integral over the surface of that volume,
+where S is a unit vector normal to the boundary. The volume integral
+vanishes as long as VAf vanishes on the boundary of phase space. Typically,
+the system is confined to a finite region in configuration space
+and has a finite energy. Then the distribution function / vanishes
+for coordinates outside that region, and also at very large momenta.
+Further, because L contains first derivatives, it can be distributed over
+a product, L(Af) = (LA)f+A(Lf). Consequently, L is anti-self-adjoint
+in phase space,
+Dynamical Variables
+The goal of nonequilibrium statistical mechanics is to understand the
+time evolution of dynamical properties of a many-body system. These
+may be some experimentally observable properties, such as the hydrodynamic
+variables (mass density, momentum density, and energy density),
+or they may even be some of the coordinates and momenta themselves.
+For the present, their exact nature is not important. What is important is
+that dynamical properties of a system are functions of its state.
+A generic dynamical variable will be denoted by A(X). Because the
+state changes with time, so does this variable; at time t, its value is A(Xt).
+Because the state at time t depends parametrically on the initial state
+X, the value of the variable at time t depends on X. This prompts some
+notation that may be confusing at first but is actually quite helpful. The
+symbol A will be used in three ways. If A does not contain any argument
+at all or contains explicitly only the argument X, as in A(X), then
+it denotes the variable itself. If A explicitly contains the argument t, as
+in A(t), .A(Xt) or A(X, t), then it denotes the value of the variable at
+time t as it evolved from the initial state X. The value of A(t) at t = 0 is
+A. (The same multiplicity of interpretations occurs in quantum mechanics,
+where, e.g., {x) can denote a pure quantum state as a function of
+position x, and (t, x) is a system's wave function as it evolves in time.)
+This notation is summarized by A(t) = A(Xt) = A(X, t) and by A = A(X)
+= A(t = 0).
+Zwanzig, Robert. Nonequilibrium Statistical Mechanics, Oxford University Press, Incorporated, 2001.
+ProQuest Ebook Central, http://ebookcentral.proquest.com/lib/utxa/detail.action?docID=281466.
+Created from utxa on 2019-01-16 11:29:31.
+Copyright © 2001. Oxford University Press, Incorporated. All rights reserved.
+34 NONEQUILIBRIUM STATISTICAL MECHANICS
+When the dynamical variable A is regarded as a function of both the
+time t and the initial state X, its initial rate of change with time is a
+function of X and can be calculated from
+This contains the same Liouville operator that was defined in eq. (2.9).
+Note that L operates on functions of the location X = (p, q) in phase
+space. The initial rate of change is LA; the initial second time derivative
+is the initial rate of change of the initial first derivative, LLA, and
+so on. The nth initial time derivative is
+This can be used to generate a formal Taylor's series expansion of the
+time-dependent dynamical variable in powers of t,
+This evidently is the solution of the operator equation,
+This is the Liouville equation for the evolution of a dynamical variable.
+Just as the Liouville equation for the distribution function is analogous
+to the Schrodinger equation in quantum mechanics, this equation is
+analogous to the Heisenberg equation of motion.
+The operator exp(tL) moves any dynamical variable along a trajectory
+in phase space and is sometimes called a "propagator." It has
+several interesting and useful properties. For example, it can be moved
+inside a function,
+and it can be distributed over products of functions,
+These identities are due to the uniqueness of the trajectory that passes
+through any specified phase point X.
+The phase space average of a dynamical variable A at time t is
+Zwanzig, Robert. Nonequilibrium Statistical Mechanics, Oxford University Press, Incorporated, 2001.
+ProQuest Ebook Central, http://ebookcentral.proquest.com/lib/utxa/detail.action?docID=281466.
+Created from utxa on 2019-01-16 11:29:31.
+Copyright © 2001. Oxford University Press, Incorporated. All rights reserved.
+FOKKER-PLANCK EQUATIONS 35
+But this is also the average of the time-dependent dynamical variable
+over the distribution of initial states,
+These two forms are equivalent because L is anti-self-adjoint in phase
+space. This is analogous to the Schrodinger-Heisenberg duality in
+quantum mechanics.
+Time Correlation Functions
+The Liouville operator notation provides a convenient way of manipulating
+equilibrium time correlation functions (TCF). Some examples
+are given here. The TCF of the dynamical variables A and B is
+where feq is the equilibrium distribution function. This is also
+and by taking the adjoint, it becomes
+The exponential operator can be distributed over B and /, and recognizing
+that the equilibrium distribution function is invariant to L, we
+find
+If A and B are the same quantity, their TCF is invariant to time
+reversal.
+The time derivative of a TCF is another TCF,
+This is the TCF of A and the time derivative of B. In the same way, the
+second time derivative is
+Zwanzig, Robert. Nonequilibrium Statistical Mechanics, Oxford University Press, Incorporated, 2001.
+ProQuest Ebook Central, http://ebookcentral.proquest.com/lib/utxa/detail.action?docID=281466.
+Created from utxa on 2019-01-16 11:29:31.
+Copyright © 2001. Oxford University Press, Incorporated. All rights reserved.
+36 NONEQUILIBRIUM STATISTICAL MECHANICS
+So, for example, the second time derivative of the velocity correlation
+function is the negative of the force-force correlation function,
+2.2 Fokker-Planck Equations
+Fokker-Planck equations are a form of Liouville equation used to
+treat the statistical behavior of dynamical systems with Markovian
+friction and Gaussian white noise. This section contains a derivation
+of the Fokker-Planck equation that corresponds to a given Langevin
+equation and some simple illustrations. Some general properties
+of Fokker-Planck equations will be discussed in the following
+section.
+Earlier sections dealt with Langevin equations and their associated
+fluctuation-dissipation theorems. It was observed that linear Langevin
+equations are easy to solve and that the effects of noise are easy to
+work out. But it was also observed that nonlinear Langevin equations
+are not easy to solve; the nonlinearity, while not a problem
+for numerical simulations, introduces serious difficulties in analytic
+studies. One practical way to handle these difficulties is to construct
+the Fokker-Planck equation that corresponds to a given Langevin
+equation.
+Derivation of a Fokker-Planck Equation
+Let us start with a quite general Langevin equation for the dynamics
+of a set of variables {a1, a2, . . .} denoted for convenience by a. At the
+beginning, no special requirements are imposed on the noise-free part
+of the dynamics, except that it is Markovian (i.e., has no memory).
+However, we do require that the noise is white and has a Gaussian
+distribution. The equations of motion are
+or, in abbreviated form,
+Zwanzig, Robert. Nonequilibrium Statistical Mechanics, Oxford University Press, Incorporated, 2001.
+ProQuest Ebook Central, http://ebookcentral.proquest.com/lib/utxa/detail.action?docID=281466.
+Created from utxa on 2019-01-16 11:29:31.
+Copyright © 2001. Oxford University Press, Incorporated. All rights reserved.
+FOKKER-PLANCK EQUATIONS 37
+where v(a) is some given function of the variables a. The noise F(t) is
+Gaussian, with zero mean and the delta-correlated second moment
+matrix,
+Rather than looking for a general solution of these equations, we ask
+for the probability distribution f(a, t) of the values of a at time t. Further,
+what we really want is the average of this probability distribution over
+the noise. One way to find the noise average is to start by recognizing
+that f(a, t) is a conserved quantity,
+Whenever a conservation law of this kind is encountered, we expect
+that the time derivative of the conserved quantity or density (in
+this case, f(a, t)) is balanced by the divergence of a flux, a velocity
+times that density. This is the way, for example, that the Liouville
+equation is derived in statistical mechanics. Here the space coordinates
+are a, the density at a is f(a, t), the velocity at a is da/dt, and the
+conservation law is
+On replacing the time derivative by the right-hand side of eq. (2.31),
+we get
+This contains a random term and is called a stochastic differential
+equation. We want to use it to derive an equation for the noise average
+of f.
+The derivation is considerably simplified by using some symbolic
+operator manipulations. To begin, we define an operator L (analogous
+to the Liouville operator) by its action on any function ,
+This is used to write a symbolic solution of the noise-free equation,
+The formal or symbolic solution (as an initial value problem) is
+Zwanzig, Robert. Nonequilibrium Statistical Mechanics, Oxford University Press, Incorporated, 2001.
+ProQuest Ebook Central, http://ebookcentral.proquest.com/lib/utxa/detail.action?docID=281466.
+Created from utxa on 2019-01-16 11:29:31.
+Copyright © 2001. Oxford University Press, Incorporated. All rights reserved.
+38 NONEQUILIBRIUM STATISTICAL MECHANICS
+Now we add the noise term,
+One integration over time leads to the operator equation,
+It is important to realize that f(a, t) depends on the noise F(s) only for
+times s that are earlier than t. By iterating, we develop a series expansion
+for / in powers of the noise. Equation (2.40) is substituted back
+into eq. (2.39), leading to
+Now we take the average over noise. The initial distribution
+function f(a, 0) is not affected by the average, so the term with a single
+F and the initial distribution function average to zero. The final
+term contains two explicit noise factors, F(t) and F(s), and also those
+noise factors that are implicit in f(a, s), but only with times earlier
+than s. The noise is Gaussian and delta-function correlated; this
+means that on averaging, we can pair the first factor F(t) with the
+second factor F(s) or with one of the implicit noise factors in f(a, s).
+(For a further explanation, see Appendix 2.) In the first case, we get
+(t -- s), and is the second case we get (t — s') with s' < s. But this second
+case is not allowed because of the limitation to t > s > s'. Thus only the
+first two noise factors need to be paired. The average introduces a
+factor B, and the delta function removes the operator e--(t--s)L.The result
+is the Fokker-Planck equation for the noise-averaged distribution
+function <f(a, t)>,
+The first term on the right-hand side is what one had on the
+absence of noise. The second term on the right-hand side accounts
+for the averaged effects of the noise. At this point, B can be any
+function of a.
+Zwanzig, Robert. Nonequilibrium Statistical Mechanics, Oxford University Press, Incorporated, 2001.
+ProQuest Ebook Central, http://ebookcentral.proquest.com/lib/utxa/detail.action?docID=281466.
+Created from utxa on 2019-01-16 11:29:31.
+Copyright © 2001. Oxford University Press, Incorporated. All rights reserved.
+FOKKER-PLANCK EQUATIONS 39
+Several comments are in order. The derivation as given here depends
+explicitly on two assumptions, that the noise is Gaussian and that it is
+delta-function correlated. Otherwise, the factorization of the average
+over noise will not work. In particular, the derivation will not work for
+a non-Markovian Langevin equation.
+Also, no fluctuation-dissipation theorem has been invoked. Nothing
+has been said about requiring that <f(a, t)> must approach an equilibrium
+distribution at long times. If there is not enough friction to dampen
+the heating effect of the noise, we expect that the system will "run
+away" so that there is no long time steady state. If there is too much
+friction for the noise, the system will cool down and "die." In fact, not
+much is known in general about the long time steady state solution of
+an arbitrary Fokker-Planck equation. All that we can usually do is guess
+at a steady state solution, put it into the equation, and see if our
+guess is compatible with v(a) and B. If a steady-state solution is found,
+then it implies a relation between v(a) and B which may be called a
+fluctuation-dissipation theorem.
+In later uses, the angular brackets " " denoting the noise average
+will be omitted; we will deal only with the averaged distribution.
+Illustrations
+The first illustration is the two-variable Brownian motion of a particle
+moving in the potential U(x). The Langevin equations are
+and the fluctuation-dissipation theorem is
+The quantities that go into the general Fokker-Planck equation are
+Then the Fokker-Planck equation becomes
+Zwanzig, Robert. Nonequilibrium Statistical Mechanics, Oxford University Press, Incorporated, 2001.
+ProQuest Ebook Central, http://ebookcentral.proquest.com/lib/utxa/detail.action?docID=281466.
+Created from utxa on 2019-01-16 11:29:31.
+Copyright © 2001. Oxford University Press, Incorporated. All rights reserved.
+40 NONEQUILIBRIUM STATISTICAL MECHANICS
+Note that if there is no noise or friction, the Fokker-Planck equation
+reduces to the standard Liouville equation for the Hamiltonian,
+With noise and friction, the equilibrium solution ( f/ t = 0) is
+where Q is the partition function at temperature T.
+This Fokker-Planck equation is the starting point for many useful
+calculations, for example, to determine the rate at which a Brownian
+particle crosses a potential barrier. The corresponding equation in
+which the coordinate x is replaced by an angle and the momentum p
+by an angular momentum is useful in treating molecular reorientation
+in liquids.
+Another example starts with the same Langevin equation, but now
+we assume that the relaxation time = m/ is very much shorter than
+any natural time scale associated with motion in the potential U(x).
+There are several ways to use this assumption; one was discussed
+earlier. Another procedure is to start with the Langevin equation,
+We drop the second derivative on the left-hand side and rearrange to
+get an approximate Langevin equation for x(t) alone,
+This leads to a Fokker-Planck equation that is commonly called the
+Smoluchowski equation,
+This equation describes diffusion in an external potential; the diffusion
+coefficient is
+Zwanzig, Robert. Nonequilibrium Statistical Mechanics, Oxford University Press, Incorporated, 2001.
+ProQuest Ebook Central, http://ebookcentral.proquest.com/lib/utxa/detail.action?docID=281466.
+Created from utxa on 2019-01-16 11:29:31.
+Copyright © 2001. Oxford University Press, Incorporated. All rights reserved.
+FOKKER-PLANCK EQUATIONS 41
+While the Smoluchowski equation is a correct representation of the
+Langevin dynamics of eq. (2.51), it is only an approximation to the
+Langevin equation of eq. (2.43).
+2.3 About Fokker-Planck Equations
+Some Properties
+Fokker-Planck equations are parabolic differential equations, but of a
+special kind. Normally, only a few of the variables appear in the second
+derivative part of the equation. (The Smoluchowski equation is an
+important exception.) There is no guarantee of a steady state solution.
+These equations are generally not self-adjoint, and little is known about
+their mathematical properties. It is likely that they can have eigenfunctions
+and eigenvalues. These can be worked out in special cases, for
+example, a planar rigid rotor or a harmonic oscillator. But there appear
+to be no general theorems about the existence or completeness of
+eigenfunction expansions and similar questions.
+The Smoluchowski equation, as an exception to the general rule, can
+be made self-adjoint by a trick. The substitution
+leads to a Schrodinger-like equation for g,
+The original potential U has been replaced by an effective potential Ueff
+involving the force and its derivative. This transformation leads to an
+equation whose properties are very well known. It has real eigenvalues
+and eigenfunctions, which form a complete set. While finding solutions
+may be just as hard as in quantum mechanical problems, there are
+no conceptual difficulties. But for the more-general Fokker-Planck
+equation, the same trick does not lead to a self-adjoint equation.
+As was observed in section 1.5, non-Markovian Langevin equations
+with exponentially decaying memory can be converted to Markovian
+Langevin equations by increasing the number of variables. Thus, a non-
+Markovian two variable Langevin equation with exponential memory
+gives rise to a three-variable Markovian Langevin equation and
+hence to a three-variable Fokker-Planck equation. By analogy with
+Zwanzig, Robert. Nonequilibrium Statistical Mechanics, Oxford University Press, Incorporated, 2001.
+ProQuest Ebook Central, http://ebookcentral.proquest.com/lib/utxa/detail.action?docID=281466.
+Created from utxa on 2019-01-16 11:29:31.
+Copyright © 2001. Oxford University Press, Incorporated. All rights reserved.
+42 NONEQUILIBRIUM STATISTICAL MECHANICS
+non-Markovian Langevin equations, one might be tempted to write
+down the corresponding non-Markovian Fokker-Planck equation, that
+is, one with memory; this is not safe.
+Averages and Adjoint Operators
+Sometimes we want the full solution of a Fokker-Planck equation, but
+sometimes we are interested only in certain averages. These can be
+found by two distinct but equivalent procedures analogous to the
+Schrodinger-Heisenberg duality in quantum mechanics.
+First, we can follow the evolution of some initial state f(a, t), by
+solving the Fokker-Planck equation,
+where the operator D is given by
+The first part of this operator is the L that appeared earlier. The second
+part represents the average effects of noise. The Fokker-Planck
+equation has a formal operator solution,
+This can be used to get the average of any dynamical property (a)
+(including the special case (a) = a),
+This may be called the "Schrodinger approach," since it focuses on
+the evolution of a probability distribution, and the average is taken at
+time t.
+The second way to get the average uses the operator that is adjoint
+to D defined by
+Now the average can be obtained by reversing the operator in the
+exponent,
+Zwanzig, Robert. Nonequilibrium Statistical Mechanics, Oxford University Press, Incorporated, 2001.
+ProQuest Ebook Central, http://ebookcentral.proquest.com/lib/utxa/detail.action?docID=281466.
+Created from utxa on 2019-01-16 11:29:31.
+Copyright © 2001. Oxford University Press, Incorporated. All rights reserved.
+FOKKER-PLANCK EQUATIONS 43
+which contains the defined time-dependent variable,
+This may be called the "Heisenberg approach" since it focuses on the
+evolution of a dynamical observable, and the average is taken over an
+initial distribution. The equation of motion for becomes
+The time dependence of (a, t) is not what one would see in a single
+experiment, that is, before averaging over noise. This quantity is defined
+so as to give the correct time dependence after averaging over noise
+but before averaging over initial conditions.
+Because the two operators (D, D ) are so similar in structure,
+there is usually no advantage in using one instead of the other, except
+in formal operator manipulations. The solution of a Fokker-Planck
+equation and its adjoint equation are equally difficult.
+Green's Function in the Linear Case
+A formal solution of the Fokker-Planck equation, as an initial
+value problem, uses the exponential operator exp tD. A more-explicit
+solution uses the Green's function G(a, t|a0),
+The Green's function satisfies the same Fokker-Planck equation, but
+with the special initial condition,
+When the streaming function v(a) is linear in a,
+the Green's function can be found easily by the following procedure.
+First we take the Fourier transform of G (in the language of Appendix
+2, we construct the moment generating function),
+Zwanzig, Robert. Nonequilibrium Statistical Mechanics, Oxford University Press, Incorporated, 2001.
+ProQuest Ebook Central, http://ebookcentral.proquest.com/lib/utxa/detail.action?docID=281466.
+Created from utxa on 2019-01-16 11:29:31.
+Copyright © 2001. Oxford University Press, Incorporated. All rights reserved.
+44 NONEQUILIBRIUM STATISTICAL MECHANICS
+Then on integrating by parts several times, the Fokker-Planck equation
+becomes a first-order partial differential equation,
+The logarithm of satisfies
+This suggests that we expand In in powers of ,
+The time-dependent coefficients obey simple differential equations,
+But the initial value of is simply exp(i • a0), so the initial values of the
+coefficients are
+These equations have solutions,
+(The expression for a appeared earlier, in section 1.4, in deriving
+the fluctuation-dissipation theorem.) These quantities have a
+simple interpretation in terms of averages and mean squared
+fluctuations,
+The Fourier transform is the exponential of a quadratic function of ,
+and so (see Appendix 2) the inverse transform is a quadratic or Gaussian
+function of a,
+The coefficient of the exponential is the normalization factor.
+Zwanzig, Robert. Nonequilibrium Statistical Mechanics, Oxford University Press, Incorporated, 2001.
+ProQuest Ebook Central, http://ebookcentral.proquest.com/lib/utxa/detail.action?docID=281466.
+Created from utxa on 2019-01-16 11:29:31.
+Copyright © 2001. Oxford University Press, Incorporated. All rights reserved.
+FOKKER-PLANCK EQUATIONS 45
+Rotational Diffusion
+As an illustration of the use of Fokker-Planck equations, we will work
+out the orientational time correlation function of a planar Brownian
+rotator. (This was done already, very briefly in section 1.3 using a
+Langevin equation). The state is specified by an angle and by an
+angular velocity . The rotator has moment of inertia /. Then the
+equilibrium distribution function is
+The Fokker-Planck equation corresponding the Langevin equation in
+section 1.3, with a change from linear velocity to angular velocity, mass
+to moment of inertia, and position to angle, is
+The orientational time correlation function to be considered here is
+where / is an integer (periodicity in angle). According to the previous
+discussion, this may be written
+So we want the solution of the Fokker-Planck equation for the special
+initial condition
+The time-dependent solution will have exactly the same angle
+dependence as the initial distribution,
+Then the time-correlation function is an integral over only,
+The Fokker-Planck equation can be solved easily, for this initial
+distribution, by the following trick: make the substitution
+Zwanzig, Robert. Nonequilibrium Statistical Mechanics, Oxford University Press, Incorporated, 2001.
+ProQuest Ebook Central, http://ebookcentral.proquest.com/lib/utxa/detail.action?docID=281466.
+Created from utxa on 2019-01-16 11:29:31.
+Copyright © 2001. Oxford University Press, Incorporated. All rights reserved.
+46 NONEQUILIBRIUM STATISTICAL MECHANICS
+so that the Fokker-Planck equation transforms into
+This looks even harder because of the quadratic nonlinearity but is
+actually quite easy to solve. We look for a solution where the exponent
+is quadratic,
+After some cancelations, this leads to the very simple
+Collecting terms, we find ordinary differential equations for a and b,
+where
+is the angular velocity relaxation time. Initially b(0) = 0, so that b(t) is
+and then a(t) — a(0) is
+When the a and b parts are combined, and the integral over angular
+velocity is performed,
+we find
+Zwanzig, Robert. Nonequilibrium Statistical Mechanics, Oxford University Press, Incorporated, 2001.
+ProQuest Ebook Central, http://ebookcentral.proquest.com/lib/utxa/detail.action?docID=281466.
+Created from utxa on 2019-01-16 11:29:31.
+Copyright © 2001. Oxford University Press, Incorporated. All rights reserved.
+FOKKER-PLANCK EQUATIONS 47
+(This is identical to the expression found using Langevin equations.) At
+short times and long times this goes as
+The crossover from one behavior to the other conies at t = T.
+Zwanzig, Robert. Nonequilibrium Statistical Mechanics, Oxford University Press, Incorporated, 2001.
+ProQuest Ebook Central, http://ebookcentral.proquest.com/lib/utxa/detail.action?docID=281466.
+Created from utxa on 2019-01-16 11:29:31.
